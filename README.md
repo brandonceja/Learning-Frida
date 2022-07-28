@@ -40,4 +40,8 @@ let's install FRIDA and try to bypass this root detection.
 
 ## Installing FRIDA
 
+I simply followed the official documentation for installing FRIDA, the requirements are just Python 3.x and PIP and just install frida using the following command:
 
+`pip install frida-tools`
+
+Then I tested the sample script for getting the Process modules in *notepad.exe*, check it on `frida_test.py`
