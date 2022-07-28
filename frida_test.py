@@ -15,3 +15,5 @@ script =  session.create_script("""
 
 script.on("message", on_message)
 script.load()
+
+print([m["name"] for m in script.exports.enumerate_modules()])
