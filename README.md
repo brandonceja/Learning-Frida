@@ -8,3 +8,6 @@ This a simple repo for documenting my process of learning FRIDA tool in mobile A
 
 For testing purposes I'll setup an Android environment with a rooted android emulator.
 
+I'm using Android Studio Emulator, I'll create a device using any Android Image without the PlayStore functionality.
+>In this case I'm choosing: *Pixel 4 XL API 30 with an R Android 11.0 x86 image*
+
