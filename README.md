@@ -4,7 +4,7 @@
 
 This a simple repo for documenting my process of learning FRIDA tool in mobile App penetration testing. :grinning:
 
-## 1° - Configuring a testing enviroment
+## Configuring a testing enviroment
 
 For testing purposes I'll setup an Android environment with a rooted android emulator.
 
@@ -34,3 +34,10 @@ Actually, I have no idea of how to use frida, I just know (or rather believe) it
 I just downloaded the APK from the OWASP repository and install it using ADB:
 
 `adb install <APK>`
+
+Once installed the first thing we notice is a message box telling us the app can't be executed in a rooted device, 
+let's install FRIDA and try to bypass this root detection.
+
+## Installing FRIDA
+
+
