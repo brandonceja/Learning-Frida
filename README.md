@@ -44,4 +44,6 @@ I simply followed the official documentation for installing FRIDA, the requireme
 
 `pip install frida-tools`
 
-Then I tested the sample script for getting the Process modules in *notepad.exe*, check it on `frida_test.py`
+Then I tested the sample script for getting the Process modules in *notepad.exe*, check it on `frida_test.py` successfully getting all the libraries DLL for *notepad.exe*
+
+
