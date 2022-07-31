@@ -50,3 +50,12 @@ Then I tested the sample script for getting the Process modules in *notepad.exe*
 
 I followed the official Frida guide for setting up the Frida-Server on my android emulator (https://frida.re/docs/android/).
 
+I copied the frida-server file from their github, uncompress it and run the following ADB commands:
+
+`adb root`
+
+`adb push frida-server /data/local/tmp/`
+
+`adb shell "chmod 755 /data/local/tmp/frida-server"`
+
+`adb shell "/data/local/tmp/frida-server &"`
