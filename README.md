@@ -100,3 +100,28 @@ Let's run it using the following command:
 
 And that easy we were able to bypass the root detection mechanism
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/6371396/182038754-b2520418-0848-40bc-a9ee-129c912778c0.png">
+
+## Getting the secret string
+
+Looking at the source code we can check there is a function called verify, which seems to call the function a.a() to perform some kind of string check
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/6371396/182039579-ed1c501d-d25c-4027-a6fd-23eace007588.png">
+
+If we check in the a.a() code, we can see it does some kind of checking of the string `b("8d127684cbc37c17616d806cf50473cc")` against the string we pass through the application.
+
+<img width="581" alt="image" src="https://user-images.githubusercontent.com/6371396/182039624-46b03b86-8a7f-46d7-8709-efa8cd86a4a6.png">
+
+In order to get the strings, let's override the implementation of a.a so we can view the parameters returned and already precalculed by the running application, check the code `SecretString.js`
+
+First trying that, we get an error because it returns the string in raw byte characters:
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/6371396/182039740-8a68e2d5-ab6f-4de0-865a-a63336af0c4f.png">
+
+So we need to convert them to string in order to print it (using another function)
+
+And by running it, we can get the secret string!
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/6371396/182039906-585990f7-42ef-4fb7-93ed-4f053eacce65.png">
+
+Success :smiley:
+
+<img width="216" alt="image" src="https://user-images.githubusercontent.com/6371396/182039961-d047e5d8-1a5f-40bf-a210-0cf1bd3bda45.png">
