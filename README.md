@@ -63,4 +63,13 @@ I copied the frida-server file from their github, uncompress it and run the foll
 Once running I validated the process using the following command: `frida-ps -U`
 
 
-## Root Bypassing 
+## Reverse Engineering the APK
+
+That's it for the setup, let's get back to the APK. First of all, let's use the tool **dex2jar** for converting the .apk to a .jar file.
+
+`d2j-dex2jar <APK>`
+
+Once in a .jar I used the tool Bytecode-Viewer for viewing the source code `java -jar Bytecode-Viewer`:
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/6371396/182036393-3f152df2-00a9-4ceb-a21f-d30b3af2eaf5.png">
+
