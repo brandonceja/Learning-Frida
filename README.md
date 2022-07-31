@@ -73,16 +73,28 @@ Once in a .jar I used the tool Bytecode-Viewer for viewing the source code `java
 
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/6371396/182036393-3f152df2-00a9-4ceb-a21f-d30b3af2eaf5.png">
 
-We can see the methods c.a, c.b and c.c are the ones that perfom different tasks to detect 
+We can see the methods c.a, c.b and c.c are the ones that perfom different tasks to detect if the Android is rooted.
+
+<img width="530" alt="image" src="https://user-images.githubusercontent.com/6371396/182038498-64c2b1fd-25be-4c75-b74f-1edc02938387.png">
+
 
 ## Root bypassing
 
-Now, let's use Frida to bypass the root detection mechanism.
+Now, let's use Frida Java API (https://frida.re/docs/javascript-api/#java) to bypass the root detection mechanism.
 
 First let's get the app identifier so we can hook it. For this, let's use the following command: 
 
 `frida-ps -U -a`
 
-We can get the id *owasp.mstg.uncrackable1*
+We can get the id of the app *owasp.mstg.uncrackable1*
 
+Then, let's use Frida to override the implementation of these 3 methods using the **Java.perform** function, check the code in `disableRoot.js`
 
+In the specific case of these app, because it automatically block us from being able to modify any code, it's necessary to start frida using the options `--no-pause` and `-f` in order to start the application in a frozen state and have time for frida to modify the function.
+
+Let's run it using the following command: 
+
+`frida -U --no-pause -l disableRoot.js -f owasp.mstg.uncrackable1`
+
+And that easy we were able to bypass the root detection mechanism
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/6371396/182038754-b2520418-0848-40bc-a9ee-129c912778c0.png">
