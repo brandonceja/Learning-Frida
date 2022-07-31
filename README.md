@@ -59,3 +59,8 @@ I copied the frida-server file from their github, uncompress it and run the foll
 `adb shell "chmod 755 /data/local/tmp/frida-server"`
 
 `adb shell "/data/local/tmp/frida-server &"`
+
+Once running I validated the process using the following command: `frida-ps -U`
+
+
+## Root Bypassing 
