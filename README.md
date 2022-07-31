@@ -4,6 +4,8 @@
 
 This a simple repo for documenting my process of learning FRIDA tool in mobile App penetration testing. :grinning:
 
+In the first exercise I based my learning on the article **Android Hacking with FRIDA** by Josh Spicer
+
 ## Configuring a testing enviroment
 
 For testing purposes I'll setup an Android environment with a rooted android emulator.
