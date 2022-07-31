@@ -9,9 +9,9 @@ This a simple repo for documenting my process of learning FRIDA tool in mobile A
 For testing purposes I'll setup an Android environment with a rooted android emulator.
 
 I'm using Android Studio Emulator, I'll create a device using any Android Image without the PlayStore functionality.
->In this case I'm choosing: *Pixel 4 XL API 30 with an R Android 11.0 x86 image*
+>In this case I'm choosing: *Pixel 4 XL API 28 with an P Android 9.0 arm64 image*
 
-<img width="207" alt="image" src="https://user-images.githubusercontent.com/6371396/181614203-87cdaf4c-2545-4d96-92ff-3ec2abd6e3d6.png">
+
 
 I'm checking root access using the following adb commands:
 
@@ -28,8 +28,8 @@ And that's it, super easy way to get a rooted Android.
 Actually, I have no idea of how to use frida, I just know (or rather believe) it's a tool that somehow manages to inject its own code snippets (using JavaScript) into a running application, in order to prove this functionality I'll be trying to solve the first OWASP UnCrackable Mobile App challenge, which can be found here:
   
  **https://github.com/OWASP/owasp-mstg/tree/master/Crackmes**
-
-<img width="766" alt="image" src="https://user-images.githubusercontent.com/6371396/181624733-5717e734-db48-4b61-97a5-e67a8587f5cf.png">
+ 
+<img width="201" alt="image" src="https://user-images.githubusercontent.com/6371396/182033791-8933b070-2475-4ba4-b04b-2fbdb560fd6c.png">
 
 I just downloaded the APK from the OWASP repository and install it using ADB:
 
@@ -46,4 +46,7 @@ I simply followed the official documentation for installing FRIDA, the requireme
 
 Then I tested the sample script for getting the Process modules in *notepad.exe*, check it on `frida_test.py` successfully getting all the libraries DLL for *notepad.exe*
 
+### Installing Frida-Server
+
+I followed the official Frida guide for setting up the Frida-Server on my android emulator (https://frida.re/docs/android/).
 
