@@ -73,3 +73,16 @@ Once in a .jar I used the tool Bytecode-Viewer for viewing the source code `java
 
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/6371396/182036393-3f152df2-00a9-4ceb-a21f-d30b3af2eaf5.png">
 
+We can see the methods c.a, c.b and c.c are the ones that perfom different tasks to detect 
+
+## Root bypassing
+
+Now, let's use Frida to bypass the root detection mechanism.
+
+First let's get the app identifier so we can hook it. For this, let's use the following command: 
+
+`frida-ps -U -a`
+
+We can get the id *owasp.mstg.uncrackable1*
+
+
